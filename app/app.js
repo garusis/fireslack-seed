@@ -27,6 +27,9 @@ angular
         controllerAs: 'authCtrl',
         data: {
           requireNoAuth: true
+        },
+        params: {
+          allowByAuth: false
         }
       })
       .state('register', {
@@ -36,6 +39,9 @@ angular
         controllerAs: 'authCtrl',
         data: {
           requireNoAuth: true
+        },
+        params: {
+          allowByAuth: false
         }
       });
 
@@ -65,4 +71,4 @@ angular
     });
   }])
   .constant('FirebaseUrl', 'https://fireslack-76c06.firebaseio.com/')
-  .service('Firebase', Firebase);
+  .constant('Firebase', Firebase);
