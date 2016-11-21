@@ -26,7 +26,7 @@
 
     authCtrl.register = function (user) {
       Auth
-        .$createUser(user)
+        .$createUserWithEmailAndPassword(user.email, user.password)
         .then(function (newUser) {
           console.log(newUser);
           authCtrl.login(user);

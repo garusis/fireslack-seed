@@ -3,12 +3,11 @@
  */
 ;!(function (module) {
 
-  AuthFactory.$inject = ['$firebaseAuth', 'FirebaseUrl', 'Firebase'];
-  function AuthFactory($firebaseAuth, FirebaseUrl, Firebase) {
-    var fireBaseReference = new Firebase(FirebaseUrl);
-    var auth = $firebaseAuth(fireBaseReference);
+  AuthFactory.$inject = ['$firebaseAuth'];
+  function AuthFactory($firebaseAuth) {
+    var Auth = $firebaseAuth();
 
-    return auth;
+    return Auth;
   }
 
   module
